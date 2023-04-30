@@ -287,7 +287,7 @@ var Cafe = {
       }
       Cafe.toggleLoading(true);
       
-      Telegram.WebApp.sendData("Hello from web app");
+      window.Telegram.WebApp.sendData("Hello from web app");
       
       Cafe.apiRequest("makeOrder", params, function (result) {
         Cafe.toggleLoading(false);
