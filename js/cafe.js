@@ -286,6 +286,9 @@ var Cafe = {
         params.user_hash = Cafe.userHash;
       }
       Cafe.toggleLoading(true);
+      
+      Telegram.WebApp.sendData("Hello from web app");
+      
       Cafe.apiRequest("makeOrder", params, function (result) {
         Cafe.toggleLoading(false);
         if (result.ok) {
